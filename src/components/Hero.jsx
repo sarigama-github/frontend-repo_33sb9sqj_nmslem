@@ -1,55 +1,58 @@
-import Spline from '@splinetool/react-spline'
+import AppMockup from './AppMockup'
 
 export default function Hero() {
   return (
-    <section className="relative pt-28">
-      <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/8nsoLg1te84JZcE9/scene.splinecode" style={{ width: '100%', height: '100%' }} />
-        {/* Gradient overlays for depth */}
-        <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/40 to-slate-950"></div>
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-slate-950"></div>
-      </div>
-
+    <section className="relative pt-28 bg-gradient-to-b from-white to-sky-50/60">
       <div className="relative z-10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl py-28">
-            <div className="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium bg-white/10 text-white/80 ring-1 ring-white/20 backdrop-blur">
-              New • Ultra-fast CRM for outbound teams
+          <div className="max-w-3xl py-16">
+            <div className="inline-flex items-center rounded-full px-3 py-1 text-xs font-medium bg-sky-100 text-sky-700 ring-1 ring-sky-200">
+              Neu • Das einfachste KI-CRM
             </div>
-            <h1 className="mt-6 text-4xl sm:text-6xl leading-tight font-semibold tracking-tight text-white">
-              Close more deals with a CRM built for cold calls
+            <h1 className="mt-6 text-4xl sm:text-6xl leading-tight font-semibold tracking-tight text-slate-900">
+              Das einfachste KI-CRM
+              <br />
+              für mehr Abschlüsse im Telefonvertrieb
             </h1>
-            <p className="mt-4 text-lg text-white/80">
-              VertriebHub streamlines prospecting, dialing, and follow-ups so your team can focus on conversations, not clicks.
+            <p className="mt-4 text-lg text-slate-700">
+              Das erste Tool, das mitdenkt und von selbst arbeitet. Es sortiert deine Kontakte nach Abschlusswahrscheinlichkeit, fasst Telefonate zusammen und erstellt automatisch Wiedervorlagen – damit du wertvolle Zeit sparst und doppelt so viele Anrufe machen kannst.
             </p>
-            <div className="mt-8 flex items-center gap-4">
-              <a href="#pricing" className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-white text-slate-900 font-semibold shadow-[0_10px_40px_rgba(59,130,246,0.25)] hover:shadow-[0_10px_50px_rgba(59,130,246,0.35)] transition">
-                Start free trial
+            <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+              <a href="#pricing" className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-slate-900 text-white font-semibold shadow-sm hover:bg-black transition">
+                Zugang sichern
               </a>
-              <a href="#features" className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-white/10 text-white ring-1 ring-white/20 hover:bg-white/15 transition">
-                See features
+              <a href="#demo" className="inline-flex items-center justify-center px-5 py-3 rounded-xl bg-white text-slate-900 ring-1 ring-slate-200 hover:bg-slate-50 transition">
+                Demo-Call buchen
               </a>
             </div>
-            <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-white/70">
+            <div className="mt-8">
+              <AppMockup />
+            </div>
+            <div className="mt-10 grid grid-cols-2 sm:grid-cols-4 gap-6 text-slate-600">
               <div>
-                <div className="text-2xl font-semibold text-white">2x</div>
-                <div className="text-xs">More connects</div>
+                <div className="text-2xl font-semibold text-slate-900">100+</div>
+                <div className="text-xs">vertrauen auf powercall.io</div>
               </div>
               <div>
-                <div className="text-2xl font-semibold text-white">-40%</div>
-                <div className="text-xs">Admin time</div>
+                <div className="text-2xl font-semibold text-slate-900">35%</div>
+                <div className="text-xs">höhere Abschlussrate</div>
               </div>
               <div>
-                <div className="text-2xl font-semibold text-white">+31%</div>
-                <div className="text-xs">Booked demos</div>
+                <div className="text-2xl font-semibold text-slate-900">100%</div>
+                <div className="text-xs">mehr Schlagzahl</div>
               </div>
               <div>
-                <div className="text-2xl font-semibold text-white">SOC2</div>
-                <div className="text-xs">Enterprise-ready</div>
+                <div className="text-2xl font-semibold text-slate-900">80%</div>
+                <div className="text-xs">weniger Nachbereitung</div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+      {/* soft background visuals */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -top-24 -right-20 h-72 w-72 rounded-full bg-sky-100 blur-3xl" />
+        <div className="absolute bottom-0 -left-10 h-72 w-72 rounded-full bg-indigo-100 blur-3xl" />
       </div>
     </section>
   )
